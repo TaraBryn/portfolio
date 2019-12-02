@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "compile-style-sass": "node-sass public/stylesheets/style.scss public/stylesheets/style.css"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",
@@ -16,5 +17,8 @@
     "morgan": "~1.9.1",
     "node-gyp": "^6.0.1",
     "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0"
   }
 }

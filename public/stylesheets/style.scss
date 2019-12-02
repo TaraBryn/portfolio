@@ -1,20 +1,24 @@
-@import url(bootstrap.min.css);
+@import 'bootstrap.min.css';
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #343a40;
-  color: white; }
+  color: white;
+}
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+}
 
-#hero-jumbotron {
+#hero-jumbotron{
   width: 100vw;
   height: 100vh;
   background-image: url("../images/female-developer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: white; }
-  @media (min-width: 650px) {
-    #hero-jumbotron {
-      background-position-x: 75%; } }
+  color: white;
+  @media(min-width: 650px){
+      background-position-x: 75%;
+    }
+}

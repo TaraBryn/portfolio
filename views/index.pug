@@ -1,5 +1,7 @@
 extends layout
 
+block nav
+    include partials/nav-home
+
 block content
-  h1= title
-  p Welcome to #{title}
+    include partials/hero
