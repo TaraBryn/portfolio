@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "compile-style-sass": "node-sass public/stylesheets/style.scss public/stylesheets/style.css"
+    "compile-style-sass": "node-sass public/css/style.scss public/css/style.css"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",
@@ -13,6 +13,7 @@
     "express": "~4.16.1",
     "helmet": "^3.21.2",
     "http-errors": "~1.6.3",
+    "jsdom": "^15.2.1",
     "mongodb": "^3.3.5",
     "morgan": "~1.9.1",
     "node-gyp": "^6.0.1",

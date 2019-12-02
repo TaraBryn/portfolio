@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const { JSDOM } = require( 'jsdom' );
+const jsdom = new JSDOM();
+
 var app = express();
 
 // view engine setup

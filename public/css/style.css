@@ -1,4 +1,6 @@
-@import url(bootstrap.min.css);
+@import url(../bootstrap-4.4.1-dist/css/bootstrap.min.css);
+@import url(../bootstrap-4.4.1-dist/css/bootstrap-grid.min.css);
+@import url(../bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css);
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #343a40;

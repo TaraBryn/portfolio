@@ -1,14 +1,21 @@
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     a.navbar-brand(href="#") Tara Bryn
-    btn.navbar-toggler(
-        type='button'
-        data-toggle='collapse'
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
+    button.navbar-toggler(
+        type="button",
+        data-toggle="collapse" 
+        data-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
         aria-label="Toggle navigation"
-    )
+        )
         span.navbar-toggler-icon
-    .collapse.navbar-collapse#navBarSupportedContent
-    ul.navbar-nav.mr-auto
-        block nav-content
+    .collapse.navbar-collapse#navbarNav
+        ul.navbar-nav
+            block nav-content
+        //form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(
+                type='search'
+                plceholder='Search'
+                aria-label='Search'
+            )
+            button.btn.btn-outline-success.my-2.my-sm-9(type='submit') Search
