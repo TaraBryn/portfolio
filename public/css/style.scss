@@ -2,10 +2,19 @@
 @import '../bootstrap-4.4.1-dist/css/bootstrap-grid.min.css';
 @import '../bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css';
 
+:root{
+  --nav-height: 75px;
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #343a40;
   color: white;
+  width: 100vw;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,14 +22,46 @@ a {
 }
 
 #hero-jumbotron{
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background-image: url("../images/female-developer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   color: white;
-  @media(min-width: 650px){
-      background-position-x: 75%;
-    }
+  background-position-x: 75%;
+  margin:0;
+}
+
+.herotext{
+  background-color: rgba(5,5,5,.4);
+}
+
+#footer{
+  height: 100px;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  p{margin-left: 50px;}
+}
+
+nav{
+  min-height: var(--nav-height);
+}
+
+#container{
+  position: relative;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  padding: 0;
+}
+
+.space::before{
+  display: block; 
+  content: " "; 
+  margin-top: calc(-1 * var(--nav-height)); 
+  height: var(--nav-height); 
+  visibility: hidden; 
+  pointer-events: none;
 }
