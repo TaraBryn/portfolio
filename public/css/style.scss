@@ -4,11 +4,12 @@
 
 :root{
   --nav-height: 75px;
+  --bg-color: #343a40
 }
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #343a40;
+  background-color: var(--bg-color);
   color: white;
   width: 100vw;
 }
@@ -24,12 +25,25 @@ a {
 #hero-jumbotron{
   height: 100vh;
   width: 100vw;
-  background-image: url("../images/female-developer.jpg");
+  /*background-image: url("../images/female-developer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: 75%;*/
+  background-color: transparent;
   color: white;
-  background-position-x: 75%;
   margin:0;
+}
+
+.bg-color{
+  background-color: var(--bg-color);
+}
+
+.hero-background{
+  background-image: url('../images/female-developer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 75%;
+  background-attachment: fixed;
 }
 
 .herotext{
