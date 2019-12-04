@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "compile-style-sass": "node-sass public/css/style.scss public/css/style.css"
+    "build-css": "node-sass --include-path public/css src/scss/style.scss public/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build": "webpack --mode production",
+    "watch-webpack": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",
@@ -17,9 +20,22 @@
     "mongodb": "^3.3.5",
     "morgan": "~1.9.1",
     "node-gyp": "^6.0.1",
-    "pug": "^2.0.4"
+    "prop-types": "^15.7.2",
+    "pug": "^2.0.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
