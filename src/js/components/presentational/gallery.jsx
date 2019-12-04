@@ -6,7 +6,15 @@ class Gallery extends Component{
     render(){
         console.log(front_end)
         return(
-            <p>test app 2</p>
+            <div class="gallery-container">
+                {front_end.map(e=>{
+                    return(
+                        <div class='front-end'>
+                            {e.name}
+                        </div>
+                    )
+                })}
+            </div>
         );
     }
 }
