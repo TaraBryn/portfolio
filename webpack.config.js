@@ -4,7 +4,7 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
+          test: /\.(jsx)$/,
           exclude: /node_modules/,
           use: {
             loader: "babel-loader"
@@ -13,7 +13,7 @@ module.exports = {
       ]
     },
     entry: {
-      gallery: './src/js/components/presentational/gallery.jsx'
+      gallery: './src/react/presentational/gallery.jsx'
     },
     output: {
       filename: '[name].js',
