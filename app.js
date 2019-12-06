@@ -8,8 +8,7 @@ var helmet = require('helmet');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const { JSDOM } = require( 'jsdom' );
-const jsdom = new JSDOM();
+global.root = __dirname;
 
 var app = express();
 
