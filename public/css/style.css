@@ -1,6 +1,7 @@
 @import url(../bootstrap-4.4.1-dist/css/bootstrap.min.css);
 @import url(../bootstrap-4.4.1-dist/css/bootstrap-grid.min.css);
 @import url(../bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css);
+/*---universals---*/
 :root {
   --nav-height: 75px;
   --bg-color: #343a40
@@ -18,30 +19,30 @@ html {
 a {
   color: #00B7FF; }
 
-#hero-jumbotron {
-  height: 100vh;
-  width: 100vw;
-  /*background-image: url("../images/female-developer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 75%;*/
-  background-color: transparent;
-  color: white;
-  margin: 0; }
+.space::before {
+  display: block;
+  content: " ";
+  margin-top: calc(-1 * var(--nav-height));
+  height: var(--nav-height);
+  visibility: hidden;
+  pointer-events: none; }
 
 .bg-color {
   background-color: var(--bg-color); }
 
-.hero-background {
-  background-image: url("../images/female-developer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 75%;
-  background-attachment: fixed; }
+/*---layout---*/
+#container {
+  position: relative;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  padding: 0; }
 
-.herotext {
-  background-color: rgba(5, 5, 5, 0.4); }
+/*--nav (partial)--*/
+nav {
+  min-height: var(--nav-height); }
 
+/*--footer (partial)--*/
 #footer {
   height: 100px;
   background-color: black;
@@ -51,20 +52,61 @@ a {
   #footer p {
     margin-left: 50px; }
 
-nav {
-  min-height: var(--nav-height); }
-
-#container {
-  position: relative;
-  top: var(--nav-height);
-  left: 0;
+/*---hero (block)---*/
+#hero-jumbotron {
+  height: 100vh;
   width: 100vw;
-  padding: 0; }
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  /*the following is for non-fixed hero image*/
+  /*background-image: url("../images/female-developer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 75%;*/ }
 
-.space::before {
-  display: block;
-  content: " ";
-  margin-top: calc(-1 * var(--nav-height));
-  height: var(--nav-height);
-  visibility: hidden;
-  pointer-events: none; }
+/*hero style used on index.pug*/
+.hero-background {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  background-image: url("../images/female-developer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 75%;
+  background-attachment: fixed;
+  width: 100vw; }
+
+.herotext {
+  background-color: rgba(5, 5, 5, 0.4); }
+
+/*---gallery style---*/
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  width: 100%;
+  overflow: hidden; }
+
+.project-container {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden; }
+  .project-container img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.project-container:hover .overlay {
+  width: 100%;
+  left: 0; }
+
+.overlay {
+  position: relative;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: rgba(2, 2, 2, 0.8);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease; }

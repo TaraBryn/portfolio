@@ -1,7 +1,3 @@
-//let { front_end } = 
-
-
-
 $(function(){
     $.ajax({
         url: '/projects/front-end'
@@ -15,8 +11,9 @@ $(function(){
                     <div class="gallery-container">
                         {front_end.map(e=>{
                             return(
-                                <div class='front-end'>
-                                    {e.name}
+                                <div class='project-container'>
+                                    <img src={'/images/' + e.image}/>
+                                    <div class='overlay'>Test</div>
                                 </div>
                             )
                         })}

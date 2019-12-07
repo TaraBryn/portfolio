@@ -11,4 +11,6 @@ router.get('/projects/front-end', (req, res) => {
   res.json(front_end)
 })
 
+router.get('/test', (req, res)=>res.send('successful'))
+
 module.exports = router;

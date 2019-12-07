@@ -3,7 +3,8 @@
                     {
                         "name": "markdown previewer",
                         "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
-                        "description": "React-Redux markdown previewer"
+                        "description": "React-Redux markdown previewer",
+                        "image": "markdown.png"
                     }
                 ]
 }
