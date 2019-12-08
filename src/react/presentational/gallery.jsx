@@ -11,13 +11,11 @@ $(function(){
                         {front_end.map(e=>{
                             console.log(e.image)
                             return(
-                                <div class='project-container'>
+                                <div 
+                                class='project-container'
+                                style={{"background-image": `url('/images/${e.image}')`}}>
                                     {/*<img src={'/images/' + e.image}/>*/}
-                                    <div
-                                    class='overlay'
-                                    style={{"background-image": "/images/" + e.image}}>
-                                        Test
-                                    </div>
+                                    <div class='overlay'> Test</div>
                                 </div>
                             )
                         })}

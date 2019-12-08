@@ -122,13 +122,18 @@ nav{
   grid-template-columns: repeat(3, 30%);
   width: 100%;
   overflow: hidden;
-  background-size: cover;
+  padding: 10px;
 }
 
 .project-container{
   width: 100%;
   height: 30vh;
   position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: black;;
   
   img {
     display: block;
