@@ -1,0 +1,50 @@
+/*---hero (block)---*/
+
+#hero-jumbotron{
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    color: white;
+    margin:0;
+  
+    /*the following is for non-fixed hero image*/
+  
+    /*background-image: url("../images/female-developer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 75%;*/
+}
+  
+/*hero style used on index.pug*/
+  
+.hero-background{ 
+    /*transform: translate3d(0,0,0)
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility:hidden; 
+    -webkit-transform: translateZ(0);*/
+    overflow:hidden;
+    position:relative;
+    background: transparent;
+    width: 100vw;
+  
+    /*the psuedo-elemet & will-change property added for smooth-scrolling*/
+    &::before{
+        content: ' ';
+        position: fixed;
+        background-image: url('/images/female-developer.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 75%;
+        background-attachment: fixed;
+        z-index: -1;
+        will-change: transform;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+  
+.herotext{
+    background-color: rgba(5,5,5,.4);
+}

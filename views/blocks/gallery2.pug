@@ -1,10 +1,12 @@
 .bg-color
     h2.space.text-center.my-5#projects My Projects
     div.gallery-container#gallery-container
-        for project in front_end
+        for project, key in front_end
             div
                 div.project-wrapper
                     .project-container
                         img(src=`/images/${project.image}`, 
                         alt=project.name)
-                        .overlay Test
+                        .overlay
+                            a.btn.btn-primary(href=`/projects/frontend/${key}/?demo=true`) Demo
+                            a.btn.btn-primary(href=`/projects/frontend${key}/`) Code

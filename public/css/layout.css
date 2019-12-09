@@ -1,0 +1,53 @@
+@import url(/bootstrap-4.4.1-dist/css/bootstrap.min.css);
+@import url(/bootstrap-4.4.1-dist/css/bootstrap-grid.min.css);
+@import url(/bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css);
+/*---universals---*/
+:root {
+  --nav-height: 75px;
+  --bg-color: #343a40
+; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: white;
+  width: 100vw; }
+
+html {
+  scroll-behavior: smooth; }
+
+a {
+  color: #00B7FF; }
+
+.space::before {
+  display: block;
+  content: " ";
+  margin-top: calc(-1 * var(--nav-height));
+  height: var(--nav-height);
+  visibility: hidden;
+  pointer-events: none; }
+
+.bg-color {
+  background-color: var(--bg-color); }
+
+/*---layout---*/
+#container {
+  position: relative;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  padding: 0; }
+
+/*--nav (partial)--*/
+nav {
+  min-height: var(--nav-height); }
+
+/*--footer (partial)--*/
+#footer {
+  height: 100px;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  align-content: center; }
+  #footer p {
+    margin-left: 50px; }

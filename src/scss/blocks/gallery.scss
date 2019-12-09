@@ -1,0 +1,64 @@
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    div{
+      width: 100%;
+      height: 100%;
+    }
+    @media(max-width: 640px){grid-template-columns: repeat(2,45%);}
+    @media(max-width: 420px){grid-template-columns: 98%;}
+  }
+  
+.project-wrapper{
+    //position child element relative to the wrapper
+    position: relative;
+    //create ratio
+    padding-bottom: 50%;
+    //give wrapper layout so IE5 and IE6 will dimension child correctly
+    height: 0;
+  
+    .project-container{
+        //free element from boundary of parent
+        position: absolute;
+        //position and dimension:
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+  
+        img{
+            width: 100%;
+            height: 100%;
+        }
+  
+        &:hover .overlay{
+            width: 100%; 
+            left: 0;
+        }
+    }
+  }
+  
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(2,2,2,0.8);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 0.5s ease;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+
+    a{
+        margin: 5px;
+        width: 150%;
+    }
+}

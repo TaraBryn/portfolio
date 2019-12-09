@@ -1,10 +1,12 @@
 {
-    "front_end": [
-                    {
-                        "name": "markdown previewer",
-                        "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
-                        "description": "React-Redux markdown previewer",
-                        "image": "markdown.png"
-                    }
-                ]
+    "front_end": {
+        "markdown_previewer": {
+            "name": "Markdown Previewer",
+            "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
+            "description": "React-Redux markdown previewer",
+            "image": "markdown.png",
+            "directory-name": "markdown_previewer",
+            "extensions": [".html", "css", ".js", ".jsx", ".scss"]
+        }
+    }
 }

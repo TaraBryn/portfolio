@@ -1,0 +1,16 @@
+extends layout
+
+block custom-styles
+    link(rel="stylesheet", href="/css/tront-end.css")
+
+block nav
+    include partials/nav-home
+
+block content
+    h1 #{name}
+    h3 (Front-End Project)
+    .project-wrapper
+        for extension in extensions
+            - let ext = extension
+            .project-tab
+                button.project-tablink(id='btn-' + ext) #{extension}
