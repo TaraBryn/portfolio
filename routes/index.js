@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let {front_end} = require(global.root + '/public/json/projects.json')
+  res.render('index', { title: 'Express', front_end });
 });
 
 router.get('/projects/front-end', (req, res) => {

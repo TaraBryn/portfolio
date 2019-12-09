@@ -123,27 +123,39 @@ nav{
   width: 100%;
   overflow: hidden;
   padding: 10px;
-}
-
-.project-container{
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-color: black;;
-  
-  img {
-    display: block;
+  div{
     width: 100%;
     height: 100%;
   }
+}
 
-  &:hover .overlay{
-    width: 100%;
+.project-wrapper{
+  //position child element relative to the wrapper
+  position: relative;
+  //create ratio
+  padding-bottom: 50%;
+  //give wrapper layout so IE5 and IE6 will dimension child correctly
+  height: 0;
+
+  .project-container{
+    //free element from boundary of parent
+    position: absolute;
+    //position and dimension:
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover .overlay{
+      width: 100%;
+      left: 0;
+    }
   }
 }
 

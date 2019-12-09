@@ -101,23 +101,27 @@ nav {
   width: 100%;
   overflow: hidden;
   padding: 10px; }
-
-.project-container {
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-color: black; }
-  .project-container img {
-    display: block;
+  .gallery-container div {
     width: 100%;
     height: 100%; }
-  .project-container:hover .overlay {
+
+.project-wrapper {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0; }
+  .project-wrapper .project-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    left: 0; }
+    height: 100%;
+    overflow: hidden; }
+    .project-wrapper .project-container img {
+      width: 100%;
+      height: 100%; }
+    .project-wrapper .project-container:hover .overlay {
+      width: 100%;
+      left: 0; }
 
 .overlay {
   position: absolute;
