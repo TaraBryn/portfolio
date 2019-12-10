@@ -1,7 +1,7 @@
 extends layout
 
 block custom-styles
-    link(rel="stylesheet", href="/css/tront-end.css")
+    link(rel="stylesheet", href="/css/front-end.css")
 
 block nav
     include partials/nav-home
@@ -10,7 +10,18 @@ block content
     h1 #{name}
     h3 (Front-End Project)
     .project-wrapper
-        for extension in extensions
-            - let ext = extension
-            .project-tab
-                button.project-tablink(id='btn-' + ext) #{extension}
+        .project-tab
+            for extension in extensions
+                - let ext = extension
+                button(id='btn-' + ext) #{extension}
+            button#demo demo
+        div#project-body
+    script.
+        $(function(){
+            '#{extensions}'.split(',').forEach(function(extension){
+                $('#btn-' + extension).click(function(){
+                    $.ajax('/project-files/front-end/#{route}/#{file}.' + extension)
+                    .then(data=>$("#project-body").html(data.replace(/</g, '&lt;').replace(/>/g, '&gt;')));
+                })
+            })
+        })

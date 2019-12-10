@@ -5,8 +5,9 @@
             "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
             "description": "React-Redux markdown previewer",
             "image": "markdown.png",
-            "directory-name": "markdown_previewer",
-            "extensions": [".html", "css", ".js", ".jsx", ".scss"]
+            "route": "markdown_previewer",
+            "file": "mark",
+            "extensions": ["html", "css", "js", "jsx", "scss"]
         }
     }
 }

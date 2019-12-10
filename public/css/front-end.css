@@ -1,0 +1,26 @@
+.project-wrapper {
+  background-color: black;
+  width: 95vw;
+  min-height: 50vh;
+  margin: auto;
+  margin-bottom: 25px; }
+
+#project-body {
+  padding: 20px; }
+
+.project-tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1; }
+  .project-tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s; }
+    .project-tab button:hover {
+      background-color: #ddd; }
+    .project-tab button:active {
+      background-color: #ccc; }
