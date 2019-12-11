@@ -1,16 +1,38 @@
+:root{
+    --nav-height: 75px;
+    --footer-height: 5rem;
+    --header-height: 7rem;
+    --media-header-height: 10rem;
+}
+
+#header-bar{
+    height: var(--header-height);
+    @media(max-width: 372px){height: var(--media-header-height);}
+}
+
 .project-wrapper{
     background-color: black;
-    width: 95vw;
-    min-height: 50vh;
+    width: 80vw;
     margin: auto;
     margin-bottom: 25px;
-    //code{color: white;}
+    resize: both;
+    overflow: hidden;
+
+    top: var(--header-height);
+    height: 100%;
+    height: calc(100vh - var(--header-height) - var(--footer-height) - var(--nav-height) - 20px);
+
+    @media(max-width: 372px){
+        top: var(--media-header-height);
+        height: calc(100vh - var(--media-header-height) - var(--footer-height) - var(--nav-height) - 20px);
+    }
 }
 
 #project-body{
-    //padding:20px;
-    height: 50vh;
-    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    resize: both;
 }
 
 .project-tab{

@@ -4,6 +4,7 @@
 /*---universals---*/
 :root {
   --nav-height: 75px;
+  --footer-height: 5rem;
   --bg-color: #343a40
 ; }
 
@@ -32,6 +33,7 @@ a {
 
 /*---layout---*/
 #container {
+  min-height: calc(100vh - var(--nav-height));
   position: relative;
   top: var(--nav-height);
   left: 0;
@@ -44,11 +46,13 @@ nav {
 
 /*--footer (partial)--*/
 #footer {
-  height: 100px;
+  height: var(--footer-height);
   background-color: black;
   width: 100%;
   display: grid;
-  align-content: center; }
+  align-content: center;
+  position: absolute;
+  bottom: 0; }
   #footer p {
     margin-left: 50px; }
 

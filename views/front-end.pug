@@ -17,8 +17,9 @@ block scripts
     //script(src='/js/highlight-go.min.js', charset="UTF-8")
 
 block content
-    h1 #{name}
-    h3 (Front-End Project)
+    div#header-bar
+        h1 #{name}
+        h3 (Front-End Project)
     .project-wrapper
         .project-tab
             for extension in extensions
