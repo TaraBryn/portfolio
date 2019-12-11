@@ -1,13 +1,16 @@
-var sanitize = require('sanitize-html-react');
-var marked = require('marked');
-
 $(document).ready(function(){
-    //Redux
-    const UPDATE = 'UPDATE';
-    
-    var reader = new FileReader();
-    const INITIAL_STRING = $.ajax('/project-files/front-end/markdown_previewer/mark.txt');
-    
+  
+  //Redux
+  const UPDATE = 'UPDATE';
+  
+  var reader = new FileReader();
+  $.ajax('/project-files/front-end/markdown_previewer/mark.txt')
+  .then(data => {
+
+    var sanitize = require('sanitize-html-react');
+    var marked = require('marked');
+    const INITIAL_STRING = data;
+
     const INITIAL_STATE = {
       input: INITIAL_STRING,
       marked: marked(INITIAL_STRING)
@@ -38,13 +41,15 @@ $(document).ready(function(){
     class Editor extends React.Component{
       constructor(props){
         super(props);
+        this.changeHandler = this.changeHandler.bind(this);
       }
+      changeHandler(e){this.props.updateInput(e.target.value);}
       render(){
         return (
         <textarea
             id="editor"
-            onChange={e=>this.props.updateInput(e.target.value)}
-value={this.props.input}>
+            onChange={this.changeHandler}
+              value={this.props.input}>
         </textarea>);
       }
     }
@@ -112,10 +117,10 @@ value={this.props.input}>
     
     const PreviewConnection = connect(mapStateToPreview, null)(Preview);
     
-    class Container extends React.Component{
+    class App extends React.Component{
       render(){
         return (
-          <div id="container">
+          <div id="app">
             <EditorConnection/>
             <PreviewConnection/>
           </div>
@@ -127,14 +132,17 @@ value={this.props.input}>
       render(){
         return (
           <Provider store = {store}>
-            <Container/>
+            <App/>
           </Provider>
         );
       }
     }
     
-    ReactDOM.render(<Wrapper/>, $("#wrapper")[0]);
+    ReactDOM.render(<Wrapper/>, $("#markdown-container")[0]);
     
     $("#preview").css("display","block");
-    
-  });
+
+  })
+  .catch(e=>console.log(e));
+  
+});
