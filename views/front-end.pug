@@ -2,9 +2,19 @@ extends layout
 
 block custom-styles
     link(rel="stylesheet", href="/css/front-end.css")
+    //link(rel="stylesheet", href="/css/hightlightjs/highlight.min.css")
+    link(rel="stylesheet", href="/css/highlightjs/ir-black.css")
 
 block nav
     include partials/nav-home
+
+block scripts
+    script(src='/js/react.production.min.js')
+    script(src='/js/react-dom.production.min.js')
+    script(src='/js/redux.min.js')
+    script(src='/js/react-redux.min.js')
+    script(src="/js/highlight.min.js")
+    //script(src='/js/highlight-go.min.js', charset="UTF-8")
 
 block content
     h1 #{name}
@@ -16,12 +26,34 @@ block content
                 button(id='btn-' + ext) #{extension}
             button#demo demo
         div#project-body
+
     script.
         $(function(){
+            const code = {
+                html: 'html',
+                js: 'javascript',
+                jsx: 'jsx',
+                css: 'css',
+                scss: 'scss'
+            }
             '#{extensions}'.split(',').forEach(function(extension){
                 $('#btn-' + extension).click(function(){
                     $.ajax('/project-files/front-end/#{route}/#{file}.' + extension)
-                    .then(data=>$("#project-body").html(data.replace(/</g, '&lt;').replace(/>/g, '&gt;')));
+                    .then(data=>{
+                        $("#project-body").html(`<code id="code" class="hljs ${code[extension]}"></code>`)
+                        $("#code").html(hljs.highlight(code[extension], data).value)
+                        .css('white-space', 'pre-wrap')
+                    });
+                })
+            })
+            $("#demo").click(function(){
+                $.ajax('/project-files/front-end/#{route}/#{file}.html')
+                .then(data=>{
+                    $("#project-body")
+                    .html(`${data}`)
                 })
             })
         })
+    - var rt = route
+    - var fl = file
+    script(src="/project-files/front-end/" + rt + '/' + fl + '.js')

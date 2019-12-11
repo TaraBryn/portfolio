@@ -4,9 +4,14 @@
     min-height: 50vh;
     margin: auto;
     margin-bottom: 25px;
+    //code{color: white;}
 }
 
-#project-body{padding:20px;}
+#project-body{
+    //padding:20px;
+    height: 50vh;
+    overflow: scroll;
+}
 
 .project-tab{
     overflow: hidden;

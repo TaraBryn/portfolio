@@ -6,7 +6,8 @@
   margin-bottom: 25px; }
 
 #project-body {
-  padding: 20px; }
+  height: 50vh;
+  overflow: scroll; }
 
 .project-tab {
   overflow: hidden;

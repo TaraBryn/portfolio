@@ -7,7 +7,7 @@
             "image": "markdown.png",
             "route": "markdown_previewer",
             "file": "mark",
-            "extensions": ["html", "css", "js", "jsx", "scss"]
+            "extensions": ["html", "scss", "jsx"]
         }
     }
 }
