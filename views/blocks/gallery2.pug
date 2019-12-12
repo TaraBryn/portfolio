@@ -3,6 +3,7 @@
     div.gallery-container#gallery-container
         for project, key in front_end
             div
+                h3 #{project.name}
                 div.project-wrapper
                     .project-container
                         img(src=`/images/${project.image}`, 
