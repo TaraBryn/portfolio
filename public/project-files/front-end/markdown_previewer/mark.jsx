@@ -85,8 +85,15 @@ $(document).ready(function(){
               id="preview"
               dangerouslySetInnerHTML={{__html: sanitize(this.props.marked)}}
               className="tabcontent"></div>
-            <div id="html" className="tabcontent">
-              {this.props.marked}
+            <div 
+              id="html" 
+              className="tabcontent hljs">
+                <pre>
+                  <code
+                  className='hljs'
+                  dangerouslySetInnerHTML={{__html: hljs.highlight('html', sanitize(this.props.marked)).value}}>
+                  </code>
+                </pre>
             </div>
           </div>
         );

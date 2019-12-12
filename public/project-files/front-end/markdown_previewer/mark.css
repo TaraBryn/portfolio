@@ -20,6 +20,8 @@
     margin-bottom: 20px; }
   #project-body #title {
     text-align: center; }
+  #project-body #html {
+    white-space: pre-wrap; }
   #project-body .tab {
     overflow: hidden;
     border: 1px solid #ccc;
