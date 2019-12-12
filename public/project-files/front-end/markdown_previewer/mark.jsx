@@ -83,7 +83,28 @@ $(document).ready(function(){
             </div>
             <div
               id="preview"
-              dangerouslySetInnerHTML={{__html: sanitize(this.props.marked)}}
+              dangerouslySetInnerHTML={{__html: sanitize(this.props.marked, {
+                allowedTags: sanitize.defaults.allowedTags.concat(['img', 'h1', 'h2', 'code', 'pre']),
+                transformTags: {
+                  'img': () => {
+                    return {
+                      tagName: 'img',
+                      attribs: {
+                        src: 'https://goo.gl/Umyytc',
+                        alt: 'React logo'
+                      },
+                      text: ''
+                    }
+                  },
+                  'a': () => {
+                    return {
+                      tagName: 'a',
+                      attribs: {href: "https://codepen.io/TaraBryn/"},
+                      text: "Tara's codepen homepage"
+                    }
+                  }
+                }
+              })}}
               className="tabcontent"></div>
             <div 
               id="html" 
@@ -91,7 +112,28 @@ $(document).ready(function(){
                 <pre>
                   <code
                   className='hljs'
-                  dangerouslySetInnerHTML={{__html: hljs.highlight('html', sanitize(this.props.marked)).value}}>
+                  dangerouslySetInnerHTML={{__html: hljs.highlight('html', sanitize(this.props.marked, {
+                    allowedTags: sanitize.defaults.allowedTags.concat(['img', 'h1', 'h2', 'code', 'pre']),
+                    transformTags: {
+                      'img': () => {
+                        return {
+                          tagName: 'img',
+                          attribs: {
+                            src: 'https://goo.gl/Umyytc',
+                            alt: 'React logo'
+                          },
+                          text: ''
+                        }
+                      },
+                      'a': () => {
+                        return {
+                          tagName: 'a',
+                          attribs: {href: "https://codepen.io/TaraBryn/"},
+                          text: "Tara's codepen homepage"
+                        }
+                      }
+                    }
+                  })).value}}>
                   </code>
                 </pre>
             </div>
