@@ -8,7 +8,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects/frontend/:project', (req, res) => {
-  res.render('front-end', require(global.root + '/public/json/projects.json').front_end[req.params.project]);
+  let project = require(global.root + '/public/json/projects.json').front_end[req.params.project];
+  project.demo = req.query.demo;
+  res.render('front-end', project);
 })
 
 router.get('/test', (req, res)=>res.send('successful'))

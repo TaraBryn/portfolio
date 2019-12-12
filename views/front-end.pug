@@ -35,7 +35,8 @@ block content
                 css: 'css',
                 scss: 'scss'
             }
-            '#{extensions}'.split(',').forEach(function(extension){
+            const extensions = '#{extensions}'.split(',');
+            extensions.forEach(function(extension){
                 $('#btn-' + extension).click(function(){
                     $.ajax('/project-files/front-end/#{route}/#{file}.' + extension)
                     .then(data=>{
@@ -52,6 +53,8 @@ block content
                     .html(`${data}`)
                 })
             })
+            if ('#{demo}') $(`#demo`).trigger('click');
+            else $(`#btn-${extensions[0]}`).trigger('click');
         })
     - var rt = route
     - var fl = file
