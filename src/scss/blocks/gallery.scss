@@ -22,6 +22,11 @@
   }
 }
 
+#gallery-section{
+  padding: 0;
+  margin: 0;
+}
+
 .gallery-container{
     display: grid;
     grid-template-columns: repeat(3, 30%);

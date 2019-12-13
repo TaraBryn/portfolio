@@ -20,7 +20,7 @@
   overflow: hidden;
   position: relative;
   background: transparent;
-  width: 100vw;
+  width: 100%;
   /*the psuedo-elemet & will-change property added for smooth-scrolling*/ }
   .hero-background::before {
     content: ' ';
