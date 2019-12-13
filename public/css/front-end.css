@@ -28,8 +28,7 @@
 #project-body {
   height: 100%;
   width: 100%;
-  overflow: auto;
-  resize: both; }
+  overflow: auto; }
 
 .project-tab {
   overflow: hidden;

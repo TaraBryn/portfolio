@@ -4,7 +4,7 @@
             "name": "Markdown Previewer",
             "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
             "description": "React-Redux markdown previewer",
-            "image": "markdown3_16x9_2.png",
+            "image": "markdown_16x9.png",
             "route": "markdown_previewer",
             "file": "mark",
             "extensions": ["html", "scss", "jsx"]
