@@ -1,0 +1,6 @@
+.contact {
+  padding-top: 20px;
+  display: grid;
+  justify-items: center; }
+  .contact a {
+    padding: 30px; }

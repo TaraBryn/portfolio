@@ -10,11 +10,13 @@
   --bg-color: #343a40
 }
 
-body {
+body{
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: white;
 }
+
+div{background-color: var(--bg-color);}
 
 html{
   scroll-behavior: smooth;
@@ -70,7 +72,6 @@ nav{
   align-content: center;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
   p{
     margin: 0;
     padding: 0;
@@ -78,4 +79,7 @@ nav{
   }
   position: absolute;
   bottom: 0;
+}
+#footer-padding{
+  height: var(--footer-height);
 }

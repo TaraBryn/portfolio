@@ -13,6 +13,9 @@ body {
   background-color: var(--bg-color);
   color: white; }
 
+div {
+  background-color: var(--bg-color); }
+
 html {
   scroll-behavior: smooth; }
 
@@ -58,10 +61,12 @@ nav {
   align-content: center;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
   position: absolute;
   bottom: 0; }
   #footer p {
     margin: 0;
     padding: 0;
     margin-left: 50px; }
+
+#footer-padding {
+  height: var(--footer-height); }
