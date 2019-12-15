@@ -27,7 +27,7 @@
     background: transparent;
     width: 100%;
   
-    /*the psuedo-elemet & will-change property added for smooth-scrolling*/
+    /*the psuedo-elemet will-change property added for smooth-scrolling*/
     &::before{
         content: ' ';
         position: fixed;

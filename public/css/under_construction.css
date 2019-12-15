@@ -1,0 +1,25 @@
+:root {
+  --nav-height: 75px;
+  --footer-height: 5rem;
+  --bg-color: #343a40
+; }
+
+.under-construction {
+  background-image: url("/images/under_construction.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100vw;
+  height: calc(100vh - var(--nav-height) - var(--footer-height));
+  /*position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    img{
+        display: block;
+        position: absolute;
+        max-height: 100%;
+        max-width: 100%;
+    }*/ }

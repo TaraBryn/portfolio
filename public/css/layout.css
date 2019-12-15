@@ -13,9 +13,6 @@ body {
   background-color: var(--bg-color);
   color: white; }
 
-div {
-  background-color: var(--bg-color); }
-
 html {
   scroll-behavior: smooth; }
 

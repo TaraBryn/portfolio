@@ -13,6 +13,10 @@ router.get('/projects/frontend/:project', (req, res) => {
   res.render('front-end', project);
 })
 
-router.get('/test', (req, res)=>res.send('successful'))
+router.get('/login', (req, res)=>{
+  res.render('under_construction');
+})
+
+//router.get('/test', (req, res)=>res.send('successful'))
 
 module.exports = router;
