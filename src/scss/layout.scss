@@ -13,7 +13,6 @@
 body{
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
-  color: white;
 }
 
 html{
@@ -35,6 +34,7 @@ a {
 
 .bg-color{
   background-color: var(--bg-color);
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6{

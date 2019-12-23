@@ -15,16 +15,17 @@ block scripts
     script(src="/js/highlight.min.js")
 
 block content
-    div#header-bar
-        h1 #{name}
-        h3 (Front-End Project)
-    .project-wrapper
-        .project-tab
-            for extension in extensions
-                - let ext = extension
-                button(id='btn-' + ext) #{extension}
-            button#demo demo
-        div#project-body
+    .bg-color
+        div#header-bar
+            h1 #{name}
+            h3 (Front-End Project)
+        .project-wrapper
+            .project-tab
+                for extension in extensions
+                    - let ext = extension
+                    button(id='btn-' + ext) #{extension}
+                button#demo demo
+            div#project-body
 
     script.
         $(function(){
