@@ -7,12 +7,12 @@
 :root{
   --nav-height: 75px;
   --footer-height: 5rem;
-  --bg-color: #343a40
+  --bg-color: #343a40;
 }
 
 body{
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: white;
 }
 
