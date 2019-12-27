@@ -1,0 +1,166 @@
+#project-body{
+    #calc-container{
+        background: grey;
+        width:100vw;
+        height: 100vh;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+      
+    #calculator{
+        height: 450px;
+        width: 500px;
+        background-color: floralwhite;
+        border-radius: 15px;
+        box-shadow: 10px 10px 10px darkslategray;
+        display: grid;
+        grid-template-rows: 10% 20% 70%;
+        align-items: center;
+        justify-items: center;
+        padding-top: 20px;
+    }
+      
+    #calc-header{
+        font-family: "Tulpen One", cursive;
+        display: grid;
+        align-content: center;
+        height: 100%;
+    }
+      
+    #display{
+        background-color: moccasin;
+        width: 480px;
+        height: 70px;
+        border-radius: 5px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        justify-content: right;
+        position: relative;
+    }
+      
+      /*output*/
+    #output{
+        font-size: 2em;
+        font-family: 'Anonymous Pro', monospace;
+        line-height: 48px;
+        padding-right: 10px;
+    }
+      
+    #input{
+        font-size: 1.17em;
+        font-family: 'Anonymous Pro', monospace;
+        /*line-height: 0px;*/
+        padding-right: 10px;
+        overflow-x: auto;
+        width: 480px !important;
+        height: 50px;
+        position: relative;
+        top: 10px;
+    }
+      
+    #left, #middle, #right, #button-wrapper{
+        height: 100%;
+        width: 100%;
+        display: grid;
+    }
+      
+    #button-wrapper{
+        grid-template-columns: 45% 10% 45%;
+        position: relative;
+        left: 6px;
+    }
+      
+    #left {
+        grid-template-columns: repeat(4, 20%); 
+        grid-template-rows: repeat(5, 15%);
+        grid-template-areas:
+            'clear ce open-paren close-paren'
+            'seven eight nine add'
+            'four five six subtract'
+            'one two three multiply'
+            'zero zero decimal divide';
+        grid-gap: 15px;
+        padding: 10px;
+        padding-bottom: 30px;
+
+        button{
+            width: 40px;
+            height: 40px;
+        }
+      
+        #zero{
+            width: 95px;
+        }
+    }
+      
+#middle{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 15%);
+        grid-template-areas: 
+          'square'
+          'sqrt'
+          'inverse'
+          'equals'
+          'equals';
+        padding-bottom: 30px;
+        padding-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        grid-gap: 15px;
+        justify-items: right;
+        align-items: space-between;
+        button{
+            width: 45px;
+            height: 40px;
+        }
+        #equals{
+            height: 95px;
+        }
+    }
+      
+    #right{
+        grid-template-columns: repeat(3, 26%);
+        /*grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: repeat(5, 20%);*/
+        grid-template-areas:
+          'power sin arcsin'
+          'root cos arccos'
+          'mod tan arctan'
+          'ln pi e'
+          'log factorial degree';
+        grid-gap: 10px;
+        grid-row-gap: 15px;
+        padding: 10px;
+        padding-bottom: 40px;
+        margin-right: -50px;
+        margin-left: 10px;
+        button{
+            width: 55px;
+            height: 40px;
+            border: 1px solid lightgrey;
+            font-size: .9em;
+        }
+        .trig div{
+            position: relative;
+            left: -4px;
+        }
+        .arctrig div{
+            position: relative;
+            left: -8px;
+        }
+    }
+      
+    @each $button in clear ce open-paren close-paren one two three four five six seven eight nine zero decimal add subtract multiply divide square sqrt inverse equals power cos arccos mod sin arcsin root tan arctan ln pi e log factorial degree{
+        ##{$button}{
+          grid-area: $button;
+        }
+    }
+      
+    button{
+        box-shadow: 1px 1px 1px gray;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+    }
+}
