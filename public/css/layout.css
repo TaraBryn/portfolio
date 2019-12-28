@@ -12,7 +12,9 @@ body {
   background-color: transparent; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: white; }
 
 a {
   color: #00B7FF; }
@@ -52,6 +54,7 @@ nav {
 #footer {
   height: var(--footer-height);
   background-color: black;
+  color: white;
   width: 100%;
   display: grid;
   align-content: center;
