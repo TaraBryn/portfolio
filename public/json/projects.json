@@ -8,6 +8,15 @@
             "route": "markdown_previewer",
             "file": "mark",
             "extensions": ["html", "scss", "jsx"]
+        },
+        "calculator": {
+            "name": "calculator",
+            "url": "https://codepen.io/TaraBryn/pen/BaBQOzr",
+            "description": "Electronic Calculator",
+            "image": "",
+            "route": "calculator",
+            "file": "calc",
+            "extensions": ["html", "scss", "jsx"]
         }
     }
 }

@@ -41,6 +41,4 @@ for (let projectKey in frontEnd){
   frontEndArray.push(Object.assign({}, config, newElement));
 }
 
-console.log(frontEndArray);
-
 module.exports = [main].concat(frontEndArray);
