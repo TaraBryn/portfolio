@@ -49,23 +49,3 @@ for (let project in frontEnd){
 }
 
 module.exports = [main].concat(frontEndArray);
-
-/*var markdown_previewer = Object.assign({}, config, {
-  name: 'markdown_previewer',
-  entry: {mark: './public/project-files/front-end/markdown_previewer/mark.jsx'},
-  output: {
-    filename: '[name].js',
-    path: __dirname + '/public/project-files/front-end/markdown_previewer'
-  }
-})
-
-var calculator = Object.assign({}, config, {
-  name: 'calculator',
-  entry: {calc: './public/project-files/front-end/calculator/calc.jsx'},
-  output: {
-    filename: '[name].js',
-    path: __dirname + '/public/project-files/front-end/calculator'
-  }
-})*/
-
-//module.exports = [main, markdown_previewer, calculator];
