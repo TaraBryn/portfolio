@@ -22,30 +22,25 @@ var main = Object.assign({}, config, {
   watch: true
 })
 
-var proj_cofig = [];
-for(project in projects.front_end) {
-  let  = project.file
-  proj_cofig.push({
-    name: project.name,
-    entry: {}
-  })
-}
-
 var projects = require('./public/json/projects.json');
 var frontEnd = projects.front_end;
 var frontEndArray = [];
 
-for (let project in frontEnd){
+for (let projectKey in frontEnd){
+  let project = frontEnd[projectKey];
   let newElement = {
-    name: project,
+    name: projectKey,
     entry: {},
     output: {
       filename: '[name].js',
-      path: __dirname + '/pubic/project-files/front-end/' + frontEnd[project].route
+      path: __dirname + '/public/project-files/front-end/' + project.route
     }
   }
-  newElement.entry[frontEnd[project].file] = './public/project-files/front-end/' + frontEnd[project].route;
+  newElement.entry[project.file] = './public/project-files/front-end/' 
+    + project.route  + '/' + project.file + '.jsx'
   frontEndArray.push(Object.assign({}, config, newElement));
 }
+
+console.log(frontEndArray);
 
 module.exports = [main].concat(frontEndArray);
