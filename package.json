@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start:dev": "nodemon -x \"npm run start\"",
     "build:css": "node-sass --include-path public -o public/css -r src/scss/",
-    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "build:project-css": "node-sass --include-path public/project-files -o public/project-files -r public/project-files",
+    "webpack:dev": "webpack --mode development",
+    "start:dev": "nodemon -x \"npm run start\"",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "watch:project-css": "nodemon -e scss -x \"npm run build:project-css\"",
-    "webpack:production": "webpack --mode production",
-    "webpack:dev": "webpack --mode development"
+    "webpack:production": "webpack --mode production"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",
