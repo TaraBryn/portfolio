@@ -1,3 +1,4 @@
+const ReduxThunk = require('redux-thunk').default;
 $(document).ready(function(){
     //redux
     const FLOATING_POINT = '((?:[0-9]*\.?[0-9]+)|(?:[0-9]+\.?[0-9]*))';
@@ -11,7 +12,7 @@ $(document).ready(function(){
       expression: '',
       output: ''
     }
-    
+
     //action generators
     function addToInput(input){
       return {
@@ -56,14 +57,6 @@ $(document).ready(function(){
           try {evaluated = math.evaluate(getState().expression);}
           catch {}
           const OUTPUT = getState().output;
-          /*if (evaluated === OUTPUT) {
-            dispatch(clearAllInput());
-            dispatch(parseInput(getState().input));
-            dispatch(renderOutput(getState().expression));
-            dispatch(addToInput(OUTPUT));
-            dispatch(addToInput(input));
-          }
-          else*/
           dispatch(addToInput(input));
         }
         else {
@@ -71,7 +64,7 @@ $(document).ready(function(){
         }
       }
     }
-    
+
     //state reducers
     function inputReducer(state = INITIAL_STATE.input, action){
       switch(action.type){
@@ -80,7 +73,7 @@ $(document).ready(function(){
           const OPERATORS = ['+', '-', '*', '/'];
           const END_NUMBER = new RegExp(FLOATING_POINT + '$');
           if (state == '0')
-            return OPERATORS.indexOf(OPERATORS) == -1 ? 
+            return OPERATORS.indexOf(OPERATORS) == -1 ?
               String(action.input) : state + String(action.input);
           if (END_NUMBER.test(state)) {
             const MATCH = state.match(END_NUMBER);
@@ -93,7 +86,7 @@ $(document).ready(function(){
             if (action.input == '.' && MATCH[0].indexOf('.') != -1) return state;
             return state + String(action.input);
           }
-          if (OPERATORS.indexOf(state[state.length-1]) != -1 
+          if (OPERATORS.indexOf(state[state.length-1]) != -1
               && OPERATORS.indexOf(action.input) != -1){
             if (action.input == '-') {
               if(OPERATORS.indexOf(state[state.length-2]) != -1)
@@ -104,7 +97,7 @@ $(document).ready(function(){
               return state.substring(0,state.length-2) + action.input;
             }
             return state.substring(0, state.length - 1) + action.input;
-            //if OPERATORS.indexOf(state[state.length-2] != -1) return 
+            //if OPERATORS.indexOf(state[state.length-2] != -1) return
           }
           return state + String(action.input)
         case CLEAR:
@@ -139,10 +132,10 @@ $(document).ready(function(){
         default: return state;
       }
     }
-    
+
     const rootReducer = Redux.combineReducers({input: inputReducer, expression: expressionReducer, output: outputReducer});
-    const store = Redux.createStore(rootReducer, INITIAL_STATE, Redux.applyMiddleware(ReduxThunk.default));
-    
+    const store = Redux.createStore(rootReducer, INITIAL_STATE, Redux.applyMiddleware(ReduxThunk));
+
     //react
     class OutputDisplay extends React.Component{
       constructor(props){
@@ -194,18 +187,19 @@ $(document).ready(function(){
         return(
           <button
             id={this.props.id}
-            class={`btn${this.props.class}`}
+            class={`btn${this.props.class} calc-button`}
             onClick={this.props.handler ? this.props.handler : this.handler}
             dangerouslySetInnerHTML={{__html: `<div>${this.props.html}</div>`}}
-            style={this.props.class ? {} : {border: '1px solid lightgrey'}}/>
+            style={this.props.class ? {} : {border: '1px solid lightgrey'}}>
+          </button>
         );
       }
     }
-    
+
     //ReactRedux
     const Provider = ReactRedux.Provider
     const connect = ReactRedux.connect
-    
+
     function mapStateToOutput(state){
       return {output: state.output};
     }
@@ -226,12 +220,12 @@ $(document).ready(function(){
         equals: () => dispatch(updateOutput())
       };
     }
-    
+
     const InputConnection = connect(mapStateToInput, null)(InputDisplay);
     const OutputConnection = connect(mapStateToOutput, null)(OutputDisplay);
     const DisplayConnection = connect(mapStateToProps, null)(Display);
     const ButtonConnection = connect(null, mapDispatchToProps)(Button);
-    
+
     class Left extends React.Component{
       constructor(props){
         super(props);
@@ -329,7 +323,8 @@ $(document).ready(function(){
                     element={e.element}
                     html={e.element}
                     class={e.class ? ' ' + e.class : ''}
-                    handler={e.handler ?  e.handler : null}/>
+                    handler={e.handler ?  e.handler : null}>
+                  </ButtonConnection>
                 );
               })
             }
@@ -375,7 +370,8 @@ $(document).ready(function(){
                     element={e.element}
                     html={e.html}
                     class={e.class ? e.class : ''}
-                    handler={e.handler ? e.handler : null}/>
+                    handler={e.handler ? e.handler : null}>
+                  </ButtonConnection>
                 );
             })}
           </div>
@@ -480,7 +476,8 @@ $(document).ready(function(){
                     id={e.id}
                     element={e.element}
                     html={e.html}
-                    class={e.class ? ' ' + e.class : ''}/>
+                    class={e.class ? ' ' + e.class : ''}>
+                  </ButtonConnection>
                 );
               })
             }
@@ -488,19 +485,19 @@ $(document).ready(function(){
         );
       }
     }
-    
+
     class ButtonWrapper extends React.Component{
       render(){
         return(
           <div id='button-wrapper'>
-            <Left/>
-            <Middle/>
-            <Right/>
+            <Left></Left>
+            <Middle></Middle>
+            <Right></Right>
           </div>
         );
       }
     }
-    
+
     class Calculator extends React.Component{
       constructor(props){
         super(props);
@@ -510,7 +507,7 @@ $(document).ready(function(){
       componentWillUnmont(){document.removeEventListener('keydown');}
       handler(e){
         switch(e.keyCode){
-          case 8: 
+          case 8:
             this.props.clear();
             break;
           case 27:
@@ -532,26 +529,26 @@ $(document).ready(function(){
           <div id='calculator'>
             <h1 id='header'>Electronic Calculator</h1>
             <div id='display' class='text-right'>
-              <OutputConnection/>
-              <InputConnection/>
+              <OutputConnection></OutputConnection>
+              <InputConnection></InputConnection>
             </div>
-            <ButtonWrapper/>
+            <ButtonWrapper></ButtonWrapper>
           </div>
         );
       }
     }
-    
+
     const CalculatorConnection = connect(null, mapDispatchToProps)(Calculator);
-    
+
     class Wrapper extends React.Component{
       render(){
         return(
           <Provider store={store}>
-            <CalculatorConnection/>
+            <CalculatorConnection></CalculatorConnection>
           </Provider>
         );
       }
     }
-    
-    ReactDOM.render(<Wrapper/>,$('#project-body')[0]);
+
+    ReactDOM.render(<Wrapper></Wrapper>,$('#calc-target')[0]);
   });

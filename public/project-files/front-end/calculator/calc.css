@@ -1,188 +1,240 @@
 #project-body {
-  /*output*/ }
-  #project-body #calc-container {
-    background: grey;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    align-content: center;
-    justify-content: center; }
-  #project-body #calculator {
-    height: 450px;
-    width: 500px;
-    background-color: floralwhite;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px darkslategray;
-    display: grid;
-    grid-template-rows: 10% 20% 70%;
-    align-items: center;
-    justify-items: center;
-    padding-top: 20px; }
-  #project-body #calc-header {
-    font-family: "Tulpen One", cursive;
-    display: grid;
-    align-content: center;
-    height: 100%; }
-  #project-body #display {
-    background-color: moccasin;
-    width: 480px;
-    height: 70px;
-    border-radius: 5px;
-    display: grid;
-    grid-template-rows: 40% 60%;
-    justify-content: right;
-    position: relative; }
-  #project-body #output {
-    font-size: 2em;
-    font-family: 'Anonymous Pro', monospace;
-    line-height: 48px;
-    padding-right: 10px; }
-  #project-body #input {
-    font-size: 1.17em;
-    font-family: 'Anonymous Pro', monospace;
-    /*line-height: 0px;*/
-    padding-right: 10px;
-    overflow-x: auto;
-    width: 480px !important;
-    height: 50px;
-    position: relative;
-    top: 10px; }
-  #project-body #left, #project-body #middle, #project-body #right, #project-body #button-wrapper {
-    height: 100%;
-    width: 100%;
-    display: grid; }
-  #project-body #button-wrapper {
-    grid-template-columns: 45% 10% 45%;
-    position: relative;
-    left: 6px; }
-  #project-body #left {
-    grid-template-columns: repeat(4, 20%);
-    grid-template-rows: repeat(5, 15%);
-    grid-template-areas: 'clear ce open-paren close-paren' 'seven eight nine add' 'four five six subtract' 'one two three multiply' 'zero zero decimal divide';
-    grid-gap: 15px;
-    padding: 10px;
-    padding-bottom: 30px; }
-    #project-body #left button {
-      width: 40px;
-      height: 40px; }
-    #project-body #left #zero {
-      width: 95px; }
-  #project-body #middle {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, 15%);
-    grid-template-areas: 'square' 'sqrt' 'inverse' 'equals' 'equals';
-    padding-bottom: 30px;
-    padding-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    grid-gap: 15px;
-    justify-items: right;
-    align-items: space-between; }
-    #project-body #middle button {
-      width: 45px;
-      height: 40px; }
-    #project-body #middle #equals {
-      height: 95px; }
-  #project-body #right {
-    grid-template-columns: repeat(3, 26%);
-    /*grid-template-columns: repeat(3, 33.33%);
+  background-color: white;
+  color: black; }
+
+#calc-container {
+  background: grey;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center; }
+
+#calculator {
+  height: 450px;
+  width: 500px;
+  background-color: floralwhite;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px darkslategray;
+  display: grid;
+  grid-template-rows: 10% 20% 70%;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px; }
+
+#calc-header {
+  font-family: "Tulpen One", cursive;
+  display: grid;
+  align-content: center;
+  height: 100%; }
+
+#display {
+  background-color: moccasin;
+  width: 480px;
+  height: 70px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  justify-content: right;
+  position: relative; }
+
+/*output*/
+#output {
+  font-size: 2em;
+  font-family: 'Anonymous Pro', monospace;
+  line-height: 48px;
+  padding-right: 10px; }
+
+#input {
+  font-size: 1.17em;
+  font-family: 'Anonymous Pro', monospace;
+  /*line-height: 0px;*/
+  padding-right: 10px;
+  overflow-x: auto;
+  width: 480px !important;
+  height: 50px;
+  position: relative;
+  top: 10px; }
+
+#left, #middle, #right, #button-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid; }
+
+#button-wrapper {
+  grid-template-columns: 45% 10% 45%;
+  position: relative;
+  left: 6px; }
+
+#left {
+  grid-template-columns: repeat(4, 20%);
+  grid-template-rows: repeat(5, 15%);
+  grid-template-areas: 'clear ce open-paren close-paren' 'seven eight nine add' 'four five six subtract' 'one two three multiply' 'zero zero decimal divide';
+  grid-gap: 15px;
+  padding: 10px;
+  padding-bottom: 30px; }
+  #left button {
+    width: 40px;
+    height: 40px; }
+  #left #zero {
+    width: 95px; }
+
+#middle {
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, 15%);
+  grid-template-areas: 'square' 'sqrt' 'inverse' 'equals' 'equals';
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  grid-gap: 15px;
+  justify-items: right;
+  align-items: space-between; }
+  #middle button {
+    width: 45px;
+    height: 40px; }
+  #middle #equals {
+    height: 95px; }
+
+#right {
+  grid-template-columns: repeat(3, 26%);
+  /*grid-template-columns: repeat(3, 33.33%);
         grid-template-rows: repeat(5, 20%);*/
-    grid-template-areas: 'power sin arcsin' 'root cos arccos' 'mod tan arctan' 'ln pi e' 'log factorial degree';
-    grid-gap: 10px;
-    grid-row-gap: 15px;
-    padding: 10px;
-    padding-bottom: 40px;
-    margin-right: -50px;
-    margin-left: 10px; }
-    #project-body #right button {
-      width: 55px;
-      height: 40px;
-      border: 1px solid lightgrey;
-      font-size: .9em; }
-    #project-body #right .trig div {
-      position: relative;
-      left: -4px; }
-    #project-body #right .arctrig div {
-      position: relative;
-      left: -8px; }
-  #project-body #clear {
-    grid-area: clear; }
-  #project-body #ce {
-    grid-area: ce; }
-  #project-body #open-paren {
-    grid-area: open-paren; }
-  #project-body #close-paren {
-    grid-area: close-paren; }
-  #project-body #one {
-    grid-area: one; }
-  #project-body #two {
-    grid-area: two; }
-  #project-body #three {
-    grid-area: three; }
-  #project-body #four {
-    grid-area: four; }
-  #project-body #five {
-    grid-area: five; }
-  #project-body #six {
-    grid-area: six; }
-  #project-body #seven {
-    grid-area: seven; }
-  #project-body #eight {
-    grid-area: eight; }
-  #project-body #nine {
-    grid-area: nine; }
-  #project-body #zero {
-    grid-area: zero; }
-  #project-body #decimal {
-    grid-area: decimal; }
-  #project-body #add {
-    grid-area: add; }
-  #project-body #subtract {
-    grid-area: subtract; }
-  #project-body #multiply {
-    grid-area: multiply; }
-  #project-body #divide {
-    grid-area: divide; }
-  #project-body #square {
-    grid-area: square; }
-  #project-body #sqrt {
-    grid-area: sqrt; }
-  #project-body #inverse {
-    grid-area: inverse; }
-  #project-body #equals {
-    grid-area: equals; }
-  #project-body #power {
-    grid-area: power; }
-  #project-body #cos {
-    grid-area: cos; }
-  #project-body #arccos {
-    grid-area: arccos; }
-  #project-body #mod {
-    grid-area: mod; }
-  #project-body #sin {
-    grid-area: sin; }
-  #project-body #arcsin {
-    grid-area: arcsin; }
-  #project-body #root {
-    grid-area: root; }
-  #project-body #tan {
-    grid-area: tan; }
-  #project-body #arctan {
-    grid-area: arctan; }
-  #project-body #ln {
-    grid-area: ln; }
-  #project-body #pi {
-    grid-area: pi; }
-  #project-body #e {
-    grid-area: e; }
-  #project-body #log {
-    grid-area: log; }
-  #project-body #factorial {
-    grid-area: factorial; }
-  #project-body #degree {
-    grid-area: degree; }
-  #project-body button {
-    box-shadow: 1px 1px 1px gray;
-    background-color: white;
-    width: 100%;
-    height: 100%; }
+  grid-template-areas: 'power sin arcsin' 'root cos arccos' 'mod tan arctan' 'ln pi e' 'log factorial degree';
+  grid-gap: 10px;
+  grid-row-gap: 15px;
+  padding: 10px;
+  padding-bottom: 40px;
+  margin-right: -50px;
+  margin-left: 10px; }
+  #right button {
+    width: 55px;
+    height: 40px;
+    border: 1px solid lightgrey;
+    font-size: .9em; }
+  #right .trig div {
+    position: relative;
+    left: -4px; }
+  #right .arctrig div {
+    position: relative;
+    left: -8px; }
+
+#clear {
+  grid-area: clear; }
+
+#ce {
+  grid-area: ce; }
+
+#open-paren {
+  grid-area: open-paren; }
+
+#close-paren {
+  grid-area: close-paren; }
+
+#one {
+  grid-area: one; }
+
+#two {
+  grid-area: two; }
+
+#three {
+  grid-area: three; }
+
+#four {
+  grid-area: four; }
+
+#five {
+  grid-area: five; }
+
+#six {
+  grid-area: six; }
+
+#seven {
+  grid-area: seven; }
+
+#eight {
+  grid-area: eight; }
+
+#nine {
+  grid-area: nine; }
+
+#zero {
+  grid-area: zero; }
+
+#decimal {
+  grid-area: decimal; }
+
+#add {
+  grid-area: add; }
+
+#subtract {
+  grid-area: subtract; }
+
+#multiply {
+  grid-area: multiply; }
+
+#divide {
+  grid-area: divide; }
+
+#square {
+  grid-area: square; }
+
+#sqrt {
+  grid-area: sqrt; }
+
+#inverse {
+  grid-area: inverse; }
+
+#equals {
+  grid-area: equals; }
+
+#power {
+  grid-area: power; }
+
+#cos {
+  grid-area: cos; }
+
+#arccos {
+  grid-area: arccos; }
+
+#mod {
+  grid-area: mod; }
+
+#sin {
+  grid-area: sin; }
+
+#arcsin {
+  grid-area: arcsin; }
+
+#root {
+  grid-area: root; }
+
+#tan {
+  grid-area: tan; }
+
+#arctan {
+  grid-area: arctan; }
+
+#ln {
+  grid-area: ln; }
+
+#pi {
+  grid-area: pi; }
+
+#e {
+  grid-area: e; }
+
+#log {
+  grid-area: log; }
+
+#factorial {
+  grid-area: factorial; }
+
+#degree {
+  grid-area: degree; }
+
+.calc-button {
+  box-shadow: 1px 1px 1px gray;
+  background-color: white;
+  width: 100%;
+  height: 100%; }

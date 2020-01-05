@@ -1,4 +1,9 @@
 #project-body{
+
+    background-color: white;
+    color: black;
+}
+
     #calc-container{
         background: grey;
         width:100vw;
@@ -157,10 +162,9 @@
         }
     }
       
-    button{
+    .calc-button{
         box-shadow: 1px 1px 1px gray;
         background-color: white;
         width: 100%;
         height: 100%;
     }
-}
