@@ -15,5 +15,6 @@
                         img(src=`/images/projects/front-end/${project.image}`, 
                         alt=project.name)
                         .overlay
-                            a.btn.btn-primary(href=`/projects/frontend/${key}/?demo=true`) Demo
-                            a.btn.btn-primary(href=`/projects/frontend/${key}/`) Code
+                            - let url = project.url.replace('/pen/', '/full/')
+                            a.btn.btn-primary(href=url, target = '_bank') Demo
+                            a.btn.btn-primary(href=project.url, target='_blank') Code

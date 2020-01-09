@@ -13,6 +13,7 @@
   padding: 10px;
   justify-items: center;
   align-items: center;
+  justify-content: space-around;
   gap: 3%;
   margin: auto; }
   .gallery-container div {

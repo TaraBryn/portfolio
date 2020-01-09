@@ -4,18 +4,27 @@
             "name": "Markdown Previewer",
             "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
             "description": "React-Redux markdown previewer",
-            "image": "markdown_16x9.png",
+            "image": "markdown_2_16x9.png",
             "route": "markdown_previewer",
             "file": "mark",
             "extensions": ["html", "scss", "jsx"]
         },
         "calculator": {
-            "name": "calculator",
+            "name": "Electronic Calculator",
             "url": "https://codepen.io/TaraBryn/pen/BaBQOzr",
             "description": "Electronic Calculator",
-            "image": "",
+            "image": "calculator_16x9.png",
             "route": "calculator",
             "file": "calc",
+            "extensions": ["html", "scss", "jsx"]
+        },
+        "pomodoro_clock": {
+            "name": "Pomodoro Clock",
+            "url": "https://codepen.io/TaraBryn/pen/gOYRazJ",
+            "description": "React Pomodoro Clock",
+            "image": "pomodoro_16x9.png",
+            "route": "clock",
+            "file": "clock",
             "extensions": ["html", "scss", "jsx"]
         }
     }
