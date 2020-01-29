@@ -16,5 +16,6 @@
                         alt=project.name)
                         .overlay
                             - let url = project.url.replace('/pen/', '/full/')
+                            .gallery-description #{project.description}
                             a.btn.btn-primary(href=url, target = '_bank') Demo
                             a.btn.btn-primary(href=project.url, target='_blank') Code

@@ -15,7 +15,11 @@
   align-items: center;
   justify-content: space-around;
   gap: 3%;
-  margin: auto; }
+  margin: auto;
+  /*.gallery-description{
+      width: 100%;
+      text-align: left;
+    }*/ }
   .gallery-container div {
     width: 100%; }
   @media (max-width: 640px) {
