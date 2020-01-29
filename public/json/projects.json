@@ -35,6 +35,15 @@
             "route": "drum",
             "file": "drum",
             "extensions": ["html", "scss", "jsx"]
+        },
+        "gdp_bar_graph": {
+            "name": "US GDP Bar Graph",
+            "url": "https://codepen.io/TaraBryn/pen/KKPxJgo",
+            "description": "D3 US GDP Bar Graph",
+            "image": "bar-graph_16x9.png",
+            "route": "gdp",
+            "file": "gdp",
+            "extensions": ["html", "scss", "jsx"]
         }
     }
 }
