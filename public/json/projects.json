@@ -26,6 +26,15 @@
             "route": "clock",
             "file": "clock",
             "extensions": ["html", "scss", "jsx"]
+        },
+        "drum_machine": {
+            "name": "Drum Machine",
+            "url": "https://codepen.io/TaraBryn/pen/eqVEzr",
+            "description": "React Drum Machine",
+            "image": "drum_16x9.png",
+            "route": "drum",
+            "file": "drum",
+            "extensions": ["html", "scss", "jsx"]
         }
     }
 }
