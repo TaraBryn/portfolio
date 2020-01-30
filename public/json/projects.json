@@ -3,7 +3,7 @@
         "markdown_previewer": {
             "name": "Markdown Previewer",
             "url": "https://codepen.io/TaraBryn/pen/QeMGjy",
-            "description": "React-Redux markdown previewer",
+            "description": "front end, react-redux",
             "image": "markdown_2_16x9.png",
             "route": "markdown_previewer",
             "file": "mark",
@@ -12,7 +12,7 @@
         "calculator": {
             "name": "Electronic Calculator",
             "url": "https://codepen.io/TaraBryn/pen/BaBQOzr",
-            "description": "Electronic Calculator",
+            "description": "front end, react-redux",
             "image": "calculator_16x9.png",
             "route": "calculator",
             "file": "calc",
@@ -21,7 +21,7 @@
         "pomodoro_clock": {
             "name": "Pomodoro Clock",
             "url": "https://codepen.io/TaraBryn/pen/gOYRazJ",
-            "description": "React Pomodoro Clock",
+            "description": "front-end, react-redux",
             "image": "pomodoro_16x9.png",
             "route": "clock",
             "file": "clock",
@@ -30,7 +30,7 @@
         "drum_machine": {
             "name": "Drum Machine",
             "url": "https://codepen.io/TaraBryn/pen/eqVEzr",
-            "description": "React Drum Machine",
+            "description": "front end, react-redux",
             "image": "drum_16x9.png",
             "route": "drum",
             "file": "drum",
@@ -39,10 +39,46 @@
         "gdp_bar_graph": {
             "name": "US GDP Bar Graph",
             "url": "https://codepen.io/TaraBryn/pen/KKPxJgo",
-            "description": "D3 US GDP Bar Graph",
+            "description": "front end, D3",
             "image": "bar-graph_16x9.png",
             "route": "gdp",
             "file": "gdp",
+            "extensions": ["html", "scss", "jsx"]
+        },
+        "d3_scatter_plot": {
+            "name": "D3 Scatter Plot",
+            "url": "https://codepen.io/TaraBryn/pen/XWrxVqz",
+            "description": "front end, D3",
+            "image": "d3-scatterPlot_16x9.png",
+            "route": "scatter",
+            "file": "scatter",
+            "extensions": ["html", "scss", "jsx"]
+        },
+        "d3_heatmap": {
+            "name": "D3 Heat Map",
+            "url": "https://codepen.io/TaraBryn/pen/bGbQZRv",
+            "description": "front end, D3",
+            "image": "d3-heatmap_16x9.png",
+            "route": "heatmap",
+            "file": "heatmap",
+            "extensions": ["html", "scss", "jsx"]
+        },
+        "d3_choropleth_map": {
+            "name": "D3 Choropleth Map",
+            "url": "https://codepen.io/TaraBryn/pen/eYOogNR",
+            "description": "front end, D3",
+            "image": "d3-choroplethmap_16x9.png",
+            "route": "choropleth",
+            "file": "choropleth",
+            "extensions": ["html", "scss", "jsx"]
+        },
+        "d3_treemap": {
+            "name": "D3 Tree Map",
+            "url": "https://codepen.io/TaraBryn/pen/XWrwbON",
+            "description": "front end, D3",
+            "image": "d3-treemap_16x9.png",
+            "route": "treemap",
+            "file": "treemap",
             "extensions": ["html", "scss", "jsx"]
         }
     }
