@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: space-around;
     align-content: space-around;
-    gap: 3rem;
+    grid-column-gap: 3%;
     margin: auto;
     div{
       width: 100%;
@@ -58,12 +58,9 @@
 
     .galleryImgHeader{
       height: 3.75rem;
+      display: grid;
+      align-content: flex-end;
     }
-
-    /*.gallery-description{
-      width: 100%;
-      text-align: left;
-    }*/
 
     .overlay{
       position: absolute;
@@ -76,20 +73,9 @@
       height: 100%;
       transition: 0.5s ease;
       display: grid;
+      grid-template-columns: 80%;
       justify-content: center;
       align-content: center;
       justify-items: center;
-      div{
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-row-gap: 2px;
-        justify-content: center;
-        justify-items: center;
-        div, a{
-          width: 100%;
-        }
-      }
   }
 }

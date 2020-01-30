@@ -9,8 +9,8 @@
     div.gallery-container#gallery-container
         for project, key in front_end
             div
-                h3.galleryImgHeader #{project.name}
-                div.project-wrapper
+                h4.galleryImgHeader #{project.name}
+                .project-wrapper
                     .project-container
                         img(src=`/images/projects/front-end/${project.image}`, 
                         alt=project.name)
@@ -18,5 +18,5 @@
                             - let url = project.url.replace('/pen/', '/full/')
                             .gallery-description 
                                 .text-center #{project.description}
-                                a.btn.btn-primary(href=url, target = '_bank') Demo
-                                a.btn.btn-primary(href=project.url, target='_blank') Code
+                            a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
+                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
