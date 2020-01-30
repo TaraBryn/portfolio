@@ -14,7 +14,8 @@
   justify-items: center;
   align-items: center;
   justify-content: space-around;
-  gap: 3%;
+  align-content: space-around;
+  gap: 3rem;
   margin: auto;
   /*.gallery-description{
       width: 100%;
@@ -63,6 +64,13 @@
     justify-content: center;
     align-content: center;
     justify-items: center; }
-    .gallery-container .overlay a {
-      margin: 5px;
-      width: 150%; }
+    .gallery-container .overlay div {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-row-gap: 2px;
+      justify-content: center;
+      justify-items: center; }
+      .gallery-container .overlay div div, .gallery-container .overlay div a {
+        width: 100%; }
