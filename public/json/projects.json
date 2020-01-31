@@ -81,5 +81,14 @@
             "file": "treemap",
             "extensions": ["html", "scss", "jsx"]
         }
+    },
+    "back_end": {
+        "url_shortener": {
+            "name": "URL Shortener",
+            "description": "Node, Express, MongoDB, Mongoose",
+            "code": "https://glitch.com/edit/#!/tarabryn-tinyurl?path=package.json:1:0",
+            "demo": "https://tarabryn-tinyurl.glitch.me/",
+            "image": "tinyurl_16x9.png"
+        }
     }
 }

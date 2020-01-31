@@ -20,3 +20,15 @@
                                 .text-center #{project.description}
                             a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
                             a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
+        for project, key in back_end
+            div
+                h4.galleryImgHeader #{project.name}
+                .project-wrapper
+                    .project-container
+                        img(src=`/images/projects/backend/${project.image}`,
+                        alt=project.name)
+                        .overlay
+                            .gallery-description
+                                .text-center #{project.description}
+                            a.btn.btn-primary.btn-block(href=project.demo, target='_blank') Demo
+                            a.btn.btn-primary.btn-block(href=project.code, target='_blank') Code
