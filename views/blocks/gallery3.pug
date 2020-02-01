@@ -22,7 +22,9 @@
                             a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
         for project, key in back_end
             div
-                h4.galleryImgHeader #{project.name}
+                h4.galleryImgHeader 
+                    | #{project.name} <br>
+                    | (back end)
                 .project-wrapper
                     .project-container
                         img(src=`/images/projects/backend/${project.image}`,

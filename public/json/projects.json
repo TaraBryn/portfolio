@@ -85,10 +85,73 @@
     "back_end": {
         "url_shortener": {
             "name": "URL Shortener",
-            "description": "Node, Express, MongoDB, Mongoose",
+            "description": "MongoDB, Mongoose",
             "code": "https://glitch.com/edit/#!/tarabryn-tinyurl?path=package.json:1:0",
             "demo": "https://tarabryn-tinyurl.glitch.me/",
             "image": "tinyurl_16x9.png"
+        },
+        "timestamp": {
+            "name": "TimeStamp API",
+            "description": "Node, Express",
+            "code": "https://glitch.com/edit/#!/tarabryn-timestamp-microservice?path=package.json:1:0",
+            "demo": "https://tarabryn-timestamp-microservice.glitch.me/",
+            "image": "timestamp_16x9.png"
+        },
+        "metric_imperial_converter": {
+            "name": "Metric Imp. Converter",
+            "description": "Chai, Body-Parser, Helmet",
+            "code": "https://glitch.com/edit/#!/humane-quark?path=package.json:17:23",
+            "demo": "https://humane-quark.glitch.me/",
+            "image": "metimp_16x9.png"
+        },
+        "header_parser": {
+            "name": "Req. Header Parser",
+            "description": "Node, Express",
+            "code": "https://glitch.com/edit/#!/tarabryn-request-header-parser-microservice?path=package.json:1:0",
+            "demo": "https://tarabryn-request-header-parser-microservice.glitch.me/",
+            "image": "headerParser_16x9.png"
+        },
+        "exercise_tracker": {
+            "name": "Exercise Tracker",
+            "description": "MongoDB, Mongoose",
+            "code": "https://glitch.com/edit/#!/tarabryn-exercise-tracker?path=package.json:1:0",
+            "demo": "https://tarabryn-exercise-tracker.glitch.me/",
+            "image": "exercise_tracker_16x9.png"
+        },
+        "personal_library": {
+            "name": "Personal Library",
+            "description": "MongoDB, Chai, Helmet, Body-Parser",
+            "code": "https://glitch.com/edit/#!/oxidized-microwave?path=package.json:4:31",
+            "demo": "https://oxidized-microwave.glitch.me/",
+            "image": "library_16x9.png"
+        },
+        "nasdaq_lookup": {
+            "name": "Nasdaq Lookup",
+            "description": "MongoDB, Chai, Helmet, Body-Parser",
+            "code": "https://glitch.com/edit/#!/obsidian-canoe?path=package.json:1:0",
+            "demo": "https://obsidian-canoe.glitch.me/",
+            "image": "nasdaq_16x9.png"
+        },
+        "issue_tracker": {
+            "name": "Issue Tracker",
+            "description": "MongoDB, Chai, Helmet, Body-Parser",
+            "code": "https://glitch.com/edit/#!/excessive-termite?path=package.json:1:0",
+            "demo": "https://excessive-termite.glitch.me/",
+            "image": "issuetracker_16x9.png"
+        },
+        "message_board": {
+            "name": "Anon Message Board",
+            "description": "MongoDB, Helmet, BCrypt",
+            "code": "https://glitch.com/edit/#!/decisive-dove?path=package.json:1:0",
+            "demo": "https://decisive-dove.glitch.me/",
+            "image": "messageboard_16x9.png"
+        },
+        "chatroom": {
+            "name": "chatroom",
+            "description": "Passport, Express-Session, Socket.IO, cookie-parser",
+            "code": "https://glitch.com/edit/#!/trapezoidal-cabinet?path=package.json:1:0",
+            "demo": "https://trapezoidal-cabinet.glitch.me/",
+            "image": "chatroom_16x9.png"
         }
     }
 }
