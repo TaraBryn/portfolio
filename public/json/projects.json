@@ -98,7 +98,7 @@
             "image": "timestamp_16x9.png"
         },
         "metric_imperial_converter": {
-            "name": "Metric Imp. Converter",
+            "name": "Metric/Imperial Converter",
             "description": "Chai, Body-Parser, Helmet",
             "code": "https://glitch.com/edit/#!/humane-quark?path=package.json:17:23",
             "demo": "https://humane-quark.glitch.me/",

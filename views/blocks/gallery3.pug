@@ -6,10 +6,11 @@
         | at my #[a(href='https://codepen.io/TaraBryn', target='_blank') codepen portfolio] (for front-end projects), 
         | #[a(href='https://glitch.com/@TaraStahler', target='_blank') glitch portfolio] (for back-end projects), 
         | or on my #[a(href='https://github.com/TaraBryn', target='_blank') github], where you can see the source code for this portfolio.
-    div.gallery-container#gallery-container
+    h3.space.text-center.my-3 Front End
+    .gallery-container
         for project, key in front_end
             div
-                h4.galleryImgHeader #{project.name}
+                h5.galleryImgHeader #{project.name}
                 .project-wrapper
                     .project-container
                         img(src=`/images/projects/front-end/${project.image}`, 
@@ -20,11 +21,11 @@
                                 .text-center #{project.description}
                             a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
                             a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
+    h3.space.text-center.my-5 Back End
+    .gallery-container
         for project, key in back_end
             div
-                h4.galleryImgHeader 
-                    | #{project.name} <br>
-                    | (back end)
+                h5.galleryImgHeader #{project.name}
                 .project-wrapper
                     .project-container
                         img(src=`/images/projects/backend/${project.image}`,
