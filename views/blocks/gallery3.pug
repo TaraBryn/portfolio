@@ -1,4 +1,4 @@
-.bg-color#gallery-section
+.bg-color.container#gallery-section
     h2.space.text-center.my-5#projects My Projects
     p 
         | *Note: more projects will be added below as I adapt more projects that I've created through 
@@ -6,32 +6,43 @@
         | at my #[a(href='https://codepen.io/TaraBryn', target='_blank') codepen portfolio] (for front-end projects), 
         | #[a(href='https://glitch.com/@TaraStahler', target='_blank') glitch portfolio] (for back-end projects), 
         | or on my #[a(href='https://github.com/TaraBryn', target='_blank') github], where you can see the source code for this portfolio.
-    h3.space.text-center.my-3 Front End
-    .gallery-container
-        for project, key in front_end
-            div
-                h5.galleryImgHeader #{project.name}
-                .project-wrapper
-                    .project-container
-                        img(src=`/images/projects/front-end/${project.image}`, 
-                        alt=project.name)
-                        .overlay
-                            - let url = project.url.replace('/pen/', '/full/')
-                            .gallery-description 
-                                .text-center #{project.description}
-                            a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
-                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
-    h3.space.text-center.my-5 Back End
-    .gallery-container
-        for project, key in back_end
-            div
-                h5.galleryImgHeader #{project.name}
-                .project-wrapper
-                    .project-container
-                        img(src=`/images/projects/backend/${project.image}`,
-                        alt=project.name)
-                        .overlay
-                            .gallery-description
-                                .text-center #{project.description}
-                            a.btn.btn-primary.btn-block(href=project.demo, target='_blank') Demo
-                            a.btn.btn-primary.btn-block(href=project.code, target='_blank') Code
+    .panel-group#accordion
+        .panel.panel-default
+            .panel-heading
+                h3.panel-title
+                    a(data-toggle='collapse', data-parent='#accordion', href='collapse1') Front End
+            .panel-collapse.collapse.in#collapse1
+                .panel-body
+                    .gallery-container
+                        for project, key in front_end
+                            div
+                                h5.galleryImgHeader #{project.name}
+                                .project-wrapper
+                                    .project-container
+                                        img(src=`/images/projects/front-end/${project.image}`, 
+                                        alt=project.name)
+                                        .overlay
+                                            - let url = project.url.replace('/pen/', '/full/')
+                                            .gallery-description 
+                                                .text-center #{project.description}
+                                            a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
+                                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
+        .panel.panel-default
+            .panel-heading
+                h3.panel-title
+                    a(data-toggle='collapse', data-parent='#accordian', href='#collapse2') Back End
+            .panel-collapse.collapse#collapse2
+                .panel-body
+                    .gallery-container
+                        for project, key in back_end
+                            div
+                                h5.galleryImgHeader #{project.name}
+                                .project-wrapper
+                                    .project-container
+                                        img(src=`/images/projects/backend/${project.image}`,
+                                        alt=project.name)
+                                        .overlay
+                                            .gallery-description
+                                                .text-center #{project.description}
+                                            a.btn.btn-primary.btn-block(href=project.demo, target='_blank') Demo
+                                            a.btn.btn-primary.btn-block(href=project.code, target='_blank') Code
