@@ -6,32 +6,43 @@
         | at my #[a(href='https://codepen.io/TaraBryn', target='_blank') codepen portfolio] (for front-end projects), 
         | #[a(href='https://glitch.com/@TaraStahler', target='_blank') glitch portfolio] (for back-end projects), 
         | or on my #[a(href='https://github.com/TaraBryn', target='_blank') github], where you can see the source code for this portfolio.
-    h3.space.text-center.my-3 Front End
-    .gallery-container
-        for project, key in front_end
-            div
-                h5.galleryImgHeader #{project.name}
-                .project-wrapper
-                    .project-container
-                        img(src=`/images/projects/front-end/${project.image}`, 
-                        alt=project.name)
-                        .overlay
-                            - let url = project.url.replace('/pen/', '/full/')
-                            .gallery-description 
-                                .text-center #{project.description}
-                            a.btn.btn-primary.btn-block(href=url, target = '_bank') Demo
-                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
-    h3.space.text-center.my-5 Back End
-    .gallery-container
-        for project, key in back_end
-            div
-                h5.galleryImgHeader #{project.name}
-                .project-wrapper
-                    .project-container
-                        img(src=`/images/projects/backend/${project.image}`,
-                        alt=project.name)
-                        .overlay
-                            .gallery-description
-                                .text-center #{project.description}
-                            a.btn.btn-primary.btn-block(href=project.demo, target='_blank') Demo
-                            a.btn.btn-primary.btn-block(href=project.code, target='_blank') Code
+    .accordian#accordion
+        .card.bg-color
+            .card-header
+                h5.mb-0
+                    btn.btn.btn-link#frontHead(type='button', data-toggle='collapse', data-target='#collapse1', aria-expanded='true', aria-controls='collapse1' ) Front End
+            .collapse.show#collapse1(aria-labelledby='frontHead', data-parent='#accordion')
+                .card-body
+                    .gallery-container
+                        for project, key in front_end
+                            div
+                                h5.galleryImgHeader #{project.name}
+                                .project-wrapper
+                                    .project-container
+                                        img(src=`/images/projects/front-end/${project.image}`,
+                                        alt=project.name)
+                                        .overlay
+                                            -let url = project.url.replace('/pen/', '/full/')
+                                            .gallery-description
+                                                .text-center #{project.description}
+                                            a.btn.btn-primary.btn-block(href=url, target='_blank') Demo
+                                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
+        .card.bg-color
+            .card-header
+                h5.mb-0
+                    btn.btn.btn-link#backHead(type='button', data-toggle='collapse', data-target='#collapse2', aria-expanded='false', aria-controls='collapse2') Back End
+            .collapse#collapse2(aria-labelledby='backHead', data-parent='#accordion')
+                .card-body
+                    .gallery-container
+                        for project, key in back_end
+                            div
+                                h5.galleryImgHeader #{project.name}
+                                .project-wrapper
+                                    .project-container
+                                        img(src=`/images/projects/backend/${project.image}`,
+                                        alt=project.name)
+                                        .overlay
+                                            .gallery-description
+                                                .text-center #{project.description}
+                                            a.btn.btn-primary.btn-block(href=project.demo, target='_blank') Demo
+                                            a.btn.btn-primary.btn-block(href=project.url, target='_blank') Code
