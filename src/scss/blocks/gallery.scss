@@ -25,7 +25,10 @@
   width: 100%;
 }
 
-.panel-title{padding-bottom: 0;}
+.panel-title{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 .gallery-container{
     display: grid;
