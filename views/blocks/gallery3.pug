@@ -1,4 +1,4 @@
-.bg-color.container#gallery-section
+.bg-color#gallery-section
     h2.space.text-center.my-5#projects My Projects
     p 
         | *Note: more projects will be added below as I adapt more projects that I've created through 
@@ -10,7 +10,7 @@
         .panel.panel-default
             .panel-heading
                 h3.panel-title
-                    a(data-toggle='collapse', data-parent='#accordion', href='collapse1') Front End
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse1') Front End
             .panel-collapse.collapse.in#collapse1
                 .panel-body
                     .gallery-container
@@ -30,8 +30,8 @@
         .panel.panel-default
             .panel-heading
                 h3.panel-title
-                    a(data-toggle='collapse', data-parent='#accordian', href='#collapse2') Back End
-            .panel-collapse.collapse#collapse2
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse2') Back End
+            .panel-collapse.collapse.in#collapse2
                 .panel-body
                     .gallery-container
                         for project, key in back_end
